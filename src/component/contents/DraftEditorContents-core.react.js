@@ -229,6 +229,7 @@ class DraftEditorContents extends React.Component<Props> {
 
       processedBlocks.push({
         block: child,
+        data: block.getData().toJS(),
         wrapperTemplate,
         key,
         offsetKey,
@@ -259,6 +260,7 @@ class DraftEditorContents extends React.Component<Props> {
           info.wrapperTemplate,
           {
             key: info.key + '-wrap',
+            data: info.data,
             'data-offset-key': info.offsetKey,
           },
           blocks,
